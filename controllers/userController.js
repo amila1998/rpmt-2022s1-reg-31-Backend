@@ -209,9 +209,8 @@ const userController = {
       const rf_token = createToken.access({ id: user._id });
       res.cookie("_apprftoken", rf_token, {
         httpOnly: true,
-        path: "*",
-        sameSite: "none",
-        secure:false,
+        path: "/",
+        sameSite: "lax",
         expires: new Date(Date.now() + 1000 * 60 * 60), //1h
       });
 
