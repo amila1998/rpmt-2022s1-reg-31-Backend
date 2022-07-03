@@ -343,7 +343,7 @@ const userController = {
       return res.status(200).json({ msg: "Signout success." });
     } catch (err) {
       res.status(500).json({ msg: err.message });
-    }
+    } 
   },
   getAllUsers: async (req, res) => {
     const query = {};

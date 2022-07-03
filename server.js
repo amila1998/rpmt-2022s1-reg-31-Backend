@@ -24,6 +24,7 @@ app.use(cors({
 app.use(express.json());
 express.urlencoded({ extended: true });
 app.use(cookieParser());
+app.set("trust proxy",1)
 
 const userRoutes = require("./routes/userRoutes");
 app.use(userRoutes);
