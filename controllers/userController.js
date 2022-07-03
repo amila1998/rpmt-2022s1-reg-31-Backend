@@ -211,6 +211,7 @@ const userController = {
         httpOnly: true,
         path: "/",
         sameSite: "lax",
+        secure:true,
         expires: new Date(Date.now() + 1000 * 60 * 60), //1h
       });
 
