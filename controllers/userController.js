@@ -208,11 +208,12 @@ const userController = {
       // create a cookie
       const rf_token = createToken.access({ id: user._id });
       res.cookie("_apprftoken", rf_token, {
-        httpOnly: true,
+        //httpOnly: true,
         path: "/",
         sameSite: "lax",
         secure:true,
         expires: new Date(Date.now() + 1000 * 60 * 60), //1h
+        domain:'.netlify.app',
       });
 
       // signing success
