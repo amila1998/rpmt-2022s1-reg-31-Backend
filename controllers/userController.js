@@ -210,7 +210,7 @@ const userController = {
       res.cookie("_apprftoken", rf_token, {
         //httpOnly: true,
         path: "/",
-        sameSite: "lax",
+        sameSite: "none",
         secure:true,
         expires: new Date(Date.now() + 1000 * 60 * 60), //1h
         domain:'.netlify.app',
